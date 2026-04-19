@@ -64,3 +64,9 @@ clean:
 help:
 	@echo "Available targets:"
 	@grep -E '^##' Makefile | sed 's/## /  /'
+
+## Run tests and output a coverage report
+coverage:
+	$(GO) test $(GOFLAGS) ./... -coverprofile=coverage.out
+	$(GO) tool cover -html=coverage.out -o coverage.html
+	@echo "Coverage report written to coverage.html"
