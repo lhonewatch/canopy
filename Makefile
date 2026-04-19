@@ -70,3 +70,7 @@ coverage:
 	$(GO) test $(GOFLAGS) ./... -coverprofile=coverage.out
 	$(GO) tool cover -html=coverage.out -o coverage.html
 	@echo "Coverage report written to coverage.html"
+
+## Open coverage report in browser (macOS)
+coverage-open: coverage
+	open coverage.html
