@@ -74,3 +74,7 @@ coverage:
 ## Open coverage report in browser (macOS)
 coverage-open: coverage
 	open coverage.html
+
+## Open coverage report in browser (Linux)
+coverage-open-linux: coverage
+	xdg-open coverage.html
